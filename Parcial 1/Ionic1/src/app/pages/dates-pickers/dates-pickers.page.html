@@ -1,0 +1,43 @@
+<app-header title="Dates and Pickers page"></app-header>
+
+<ion-content [fullscreen]="true">
+  <h2>Pickers</h2>
+
+  <ion-picker>
+    <ion-picker-column>
+      <ion-picker-column-option>Peperoni</ion-picker-column-option>
+      <ion-picker-column-option>Hawaiana</ion-picker-column-option>
+      <ion-picker-column-option>Honolulu</ion-picker-column-option>
+      <ion-picker-column-option>Mexicana</ion-picker-column-option>
+    </ion-picker-column>
+  </ion-picker>
+
+  <ion-picker>
+    <ion-picker-column>
+      <ion-picker-column-option>tORTILLA</ion-picker-column-option>
+      <ion-picker-column-option>Tostada</ion-picker-column-option>
+      <ion-picker-column-option>Flauta</ion-picker-column-option>
+    </ion-picker-column>
+    <ion-picker-column>
+      <ion-picker-column-option>Arrachera</ion-picker-column-option>
+      <ion-picker-column-option>Pollo</ion-picker-column-option>
+      <ion-picker-column-option>Citrón</ion-picker-column-option>
+    </ion-picker-column>
+    <ion-picker-column>
+      <ion-picker-column-option>Con picante</ion-picker-column-option>
+      <ion-picker-column-option>Sin picante</ion-picker-column-option>
+    </ion-picker-column>
+  </ion-picker>
+  
+  <ion-datetime></ion-datetime>
+  <ion-datetime value="2003-03-10" min="2003-01-01" max="2003-12-31"></ion-datetime>
+  <ion-datetime dayValues="5,19,15,20,25"></ion-datetime>
+  <ion-datetime minuteValues="15,30,45,60" hourCycle="12h">
+    <span slot="time-label">Selecciona la hora</span>
+  </ion-datetime>
+
+  <ion-datetime presentation="time"></ion-datetime>
+  <ion-datetime presentation="year"></ion-datetime>
+  <ion-datetime presentation="date"></ion-datetime>
+  
+</ion-content>

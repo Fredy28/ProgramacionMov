@@ -1,0 +1,23 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>Gumball</ion-title>
+    <ion-avatar slot="end">
+      <img src="https://i.pinimg.com/736x/38/3b/ee/383beea690bbec590b2e02bbfd599c98.jpg" alt="img">
+    </ion-avatar>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-list>
+    @for (contact of contactos; track $index) {
+      <ion-item>
+        <ion-avatar slot="start">
+          <img src="https://i.pinimg.com/736x/38/3b/ee/383beea690bbec590b2e02bbfd599c98.jpg" alt="img">
+        </ion-avatar>
+        <ion-label>
+          {{contact}}
+        </ion-label>
+      </ion-item>
+    }
+  </ion-list>
+</ion-content>

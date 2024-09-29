@@ -1,0 +1,16 @@
+<app-header title="Action-Sheet Page"></app-header>
+
+<ion-content [fullscreen]="true">
+  <ion-button (click)="openActionSheet()" color="tertiary" class="ion-margin" expand="block">
+    Open Action Sheet
+  </ion-button>
+
+  <ion-button (click)="Fredi()" color="tertiary" class="ion-margin" expand="block">
+    Fredi
+  </ion-button>
+
+  <ion-button 
+  (click)="openCustomActionSheet()" 
+  color="tertiary" 
+  class="ion-margin" expand="block">Open Action Custom Sheet</ion-button>
+</ion-content>

@@ -1,0 +1,20 @@
+<app-header title="Mis favoritos"></app-header>
+
+<ion-content [fullscreen]="true">
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title size="large">Tab 3</ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+  <ion-grid >
+    <ion-row>
+      @for (anime of favorites; track $index) {
+        <ion-col sizeXs="6" sizeSm="3" sizeMd="3" sizeLg="2">
+          <app-card-anime [animeInfo]="anime"></app-card-anime>
+        </ion-col>
+      } 
+      </ion-row>
+    </ion-grid>
+
+</ion-content>

@@ -1,0 +1,22 @@
+<app-header title="Tab 1 page">
+</app-header>
+
+<ion-content [fullscreen]="true" color="dark">
+  @if (load == false) {
+    <div class="ion-text-center">
+      <ion-spinner style="width: 150px !important; height: 150px !important;" color="light" name="bubbles"></ion-spinner>
+    </div>
+  }
+  
+  <ion-grid >
+    <ion-row>
+      @for (item of listaAnimes; track $index) {
+        <ion-col sizeXs="6" sizeSm="3" sizeMd="3" sizeLg="2">
+ 
+          <app-card-anime [animeInfo]="item"></app-card-anime>
+        </ion-col>
+      } 
+    </ion-row>
+  </ion-grid>
+
+</ion-content>

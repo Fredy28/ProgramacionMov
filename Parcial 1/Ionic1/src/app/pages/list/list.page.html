@@ -1,0 +1,28 @@
+<app-header title="List page"></app-header>
+
+<ion-content [fullscreen]="true" color="success">
+
+  <ion-list inset="true">
+    @for (hero of superheroes; track $index) {
+      <ion-item>{{hero}}</ion-item>
+    }
+  </ion-list>
+
+  <ion-list>
+    @for (hero of superheroes; track $index) {
+      <ion-item>{{hero}}</ion-item>
+    }
+  </ion-list>
+
+  <ion-list lines="full">
+    @for (hero of superheroes; track $index) {
+      <ion-item>{{hero}}</ion-item>
+    }
+  </ion-list>
+
+  <ion-list lines="none">
+    @for (hero of superheroes; track $index) {
+      <ion-item>{{hero}}</ion-item>
+    }
+  </ion-list>
+</ion-content>

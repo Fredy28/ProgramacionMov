@@ -1,0 +1,32 @@
+<app-header title="Segment page"></app-header>
+
+<ion-content [fullscreen]="true">
+  <ion-segment>
+    <ion-segment-button>
+      <ion-label>Hogar</ion-label>
+    </ion-segment-button>
+    <ion-segment-button>
+      <ion-label>Electrónica</ion-label>
+    </ion-segment-button>
+    <ion-segment-button>
+      <ion-label>Moda</ion-label>
+    </ion-segment-button>
+  </ion-segment>
+
+  <ion-segment scrollable="true" color="success">
+    @for (genre of MovieGenres; track $index) {
+      <ion-segment-button>
+        <ion-label>{{genre}}</ion-label>
+      </ion-segment-button>
+    }
+  </ion-segment>
+
+  <ion-segment color="success">
+    @for (opt of opciones; track $index) {
+      <ion-segment-button>
+        <ion-icon name="{{opt}}"></ion-icon>
+      </ion-segment-button>
+    }
+  </ion-segment>
+
+</ion-content>

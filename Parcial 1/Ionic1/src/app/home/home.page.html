@@ -1,0 +1,18 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>
+      {{ nombre }}
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-list>
+    @for (comp of componentes; track $index) {
+      <ion-item [routerLink]="comp.route" detail>
+        <ion-icon [color]="comp.color" slot="start" [name]="comp.icon"></ion-icon>
+        {{ comp.name }}
+      </ion-item>
+    }
+  </ion-list>
+</ion-content>

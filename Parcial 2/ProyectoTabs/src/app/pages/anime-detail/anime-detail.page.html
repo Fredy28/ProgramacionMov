@@ -1,0 +1,42 @@
+<app-header title="anime Detail"></app-header>
+
+<ion-content [fullscreen]="true">
+  <ion-card>
+    <ion-card-header>
+      <ion-card-title>{{miAnime.title}}</ion-card-title>
+      <ion-card-subtitle>{{miAnime.title_japanese}}</ion-card-subtitle>
+    </ion-card-header>
+
+    <ion-item>
+      <ion-img [src]="miAnime?.images?.jpg?.large_image_url"></ion-img>
+    </ion-item>
+
+    <ion-card-content>
+      <ion-item>
+        <ion-label>
+          <h2>Duración: {{miAnime.duration}}</h2>
+          <h2>Episodios: {{miAnime.episodes}}</h2>
+        </ion-label>
+      </ion-item>
+
+      <ion-item>
+        <p>{{miAnime.background}}</p>
+      </ion-item>
+
+    </ion-card-content>
+  </ion-card>
+
+  <ion-item-divider color="danger">
+    <ion-label color="light">Personajes</ion-label>
+  </ion-item-divider>
+  <ion-list>
+    @for (p of personajes; track $index) {
+      <ion-item>
+        <ion-avatar slot="end">
+          <img [src]="p.character.images.jpg.image_url">
+        </ion-avatar>
+        <ion-label>{{p.character.name}}</ion-label>
+    </ion-item>
+    }
+</ion-list>
+</ion-content>

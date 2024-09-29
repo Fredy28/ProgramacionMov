@@ -1,0 +1,31 @@
+<app-header title="Examen Page"></app-header>
+
+<ion-content [fullscreen]="true">
+
+  <ion-row >
+      @for (p of products; track $index) {
+    <ion-col size="12" size-md="4">
+    <ion-card>
+    <ion-card-content>
+      <img src="{{p.imgUrl}}">
+      <ion-card-header>
+        <ion-card-title>Producto: {{p.title}}</ion-card-title>
+        <ion-card-subtitle>Precio: {{p.price | currency}}</ion-card-subtitle>
+        <ion-card-subtitle>Categoría: {{p.category}}</ion-card-subtitle>
+        <ion-card-subtitle>Disponibilidad: {{p.available}}</ion-card-subtitle>
+        <ion-button color="success" (click)="openToast()">
+          <ion-icon slot="start" name="cart-outline"></ion-icon>
+          Carrito
+        </ion-button>
+        <ion-button color="danger" (click)="openToast()">
+          <ion-icon slot="end" name="heart" ></ion-icon>
+          Favorito
+        </ion-button>
+      </ion-card-header>
+    </ion-card-content>
+  </ion-card>
+</ion-col>
+}
+</ion-row>
+  
+</ion-content>

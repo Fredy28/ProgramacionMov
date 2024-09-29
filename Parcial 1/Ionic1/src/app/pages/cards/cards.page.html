@@ -1,0 +1,79 @@
+<app-header title="Cards Page"></app-header>
+
+<ion-content [fullscreen]="true">
+  <ion-card mode="mi">
+    <ion-card-header>
+      <ion-card-subtitle>Awesome subtitle</ion-card-subtitle>
+      <ion-card-title>Awesome title</ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer malesuada, justo vel condimentum posuere, justo urna ultricies velit, vitae condimentum mi nunc eu velit.
+        Nullam tincidunt, nunc non laoreet tincidunt, est mauris vulputate metus, sed bibendum velit nunc at nunc. Sed consectetur, nunc vel auctor cursus, urna nunc condimentum ipsum, et ultricies urna nisi vel velit.
+        Sed dignissim, dolor vel consectetur tincidunt, mauris purus scelerisque neque, vel ultricies eros velit id lectus. Donec vel velit non nunc cursus viverra.
+        Donec vel velit non nunc cursus viverra. Sed dignissim, dolor vel consectetur tincidunt, mauris purus scelerisque neque, vel ultricies eros velit id lectus. Donec vel velit non nunc cursus viverra.
+      </p>
+    </ion-card-content>
+  </ion-card>
+
+  <ion-card mode="md">
+    <ion-card-header>
+      <ion-card-subtitle>Awesome subtitle</ion-card-subtitle>
+      <ion-card-title>Awesome title</ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer malesuada, justo vel condimentum posuere, justo urna ultricies velit, vitae condimentum mi nunc eu velit.
+        Nullam tincidunt, nunc non laoreet tincidunt, est mauris vulputate metus, sed bibendum velit nunc at nunc. Sed consectetur, nunc vel auctor cursus, urna nunc condimentum ipsum, et ultricies urna nisi vel velit.
+        Sed dignissim, dolor vel consectetur tincidunt, mauris purus scelerisque neque, vel ultricies eros velit id lectus. Donec vel velit non nunc cursus viverra.
+        Donec vel velit non nunc cursus viverra. Sed dignissim, dolor vel consectetur tincidunt, mauris purus scelerisque neque, vel ultricies eros velit id lectus. Donec vel velit non nunc cursus viverra.
+      </p>
+    </ion-card-content>
+  </ion-card>
+
+  <ion-card>
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTfQrDD5Vhh0UO3FHOBkjG_DzRkkm0xXSEAqQ&s">
+    <ion-card-header>
+      <ion-card-title>Teemo</ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      Teemo, un héroe de la MCD, es un personaje de videojuego de estrategia y tiro en primera persona. Ha sido desarrollado por Riot Games y se ha popularizado en la consola PlayStation 4 y Microsoft Xbox One.
+    </ion-card-content>
+  </ion-card>
+
+  <ion-card>
+  <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTfQrDD5Vhh0UO3FHOBkjG_DzRkkm0xXSEAqQ&s">
+  <ion-card-header>
+    <ion-card-title>Producto 1</ion-card-title>
+    <ion-card-subtitle>$ 359.00</ion-card-subtitle>
+  </ion-card-header>
+  <ion-button fill="clear">Ver más</ion-button>
+  <ion-button fill="clear">Comprar</ion-button>
+</ion-card>
+
+<ion-card color="success">
+  <ion-card-content>
+    Teemo, un héroe de la MCD, es un personaje de videojuego de estrategia y tiro en primera persona. Ha sido desarrollado por Riot Games y se ha popularizado en la consola PlayStation 4 y Microsoft Xbox One.
+  </ion-card-content>
+</ion-card>
+<ion-card color="danger">
+  <ion-card-content>
+    Teemo, un héroe de la MCD, es un personaje de videojuego de estrategia y tiro en primera persona. Ha sido desarrollado por Riot Games y se ha popularizado en la consola PlayStation 4 y Microsoft Xbox One.
+  </ion-card-content>
+</ion-card>
+
+
+  @for (c of playlist; track $index) {
+    <ion-card>
+    <ion-card-content>
+      <img src="{{c.img}}">
+      <ion-card-header>
+        <ion-card-title>{{c.titulo}}</ion-card-title>
+        <ion-card-subtitle>{{c.artista}}</ion-card-subtitle>
+        <ion-card-subtitle>Género: {{c.genero}}</ion-card-subtitle>
+        <ion-card-subtitle>Album: {{c.album}}</ion-card-subtitle>
+      </ion-card-header>
+    </ion-card-content>
+  </ion-card>
+  }
+</ion-content>
